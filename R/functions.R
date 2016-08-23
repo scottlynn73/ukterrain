@@ -61,7 +61,7 @@ showUKterrain <- function(){
 #'
 mapterrain <- function(tile){
         elevation <- raster::raster(tile)
-        pal <- colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"),
+        pal <- leaflet::colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"),
                             values(elevation), na.color = "transparent")
         tile_name <- stringr::str_sub(tile, start= -11)
         title_string <- paste0(tile_name, " SRTM Elev. (m)")
@@ -80,7 +80,7 @@ mapterrain <- function(tile){
 #' @keywords terrain
 #' @export
 #' @examples
-#' toUKterrain("/Users/Scott/Downloads/N55W005.hgt")
+#' toUKterrain("/Users/Scott/Downloads/", "N55W005.hgt")
 #'
 toUKterrain <- function(filepath, tile){
         setwd(filepath)
