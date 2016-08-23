@@ -30,7 +30,9 @@ Use the function like so (no arguments are needed)
 ### View terrain file in a webmap
 To show one of the tiles we downloaded in a map use the mapUKterrain function, like so
 
-`mapUKterrain("/Users/Scott/Downloads/N55W005.hgt")`
+`mapterrain("/Users/Scott/Downloads/N55W005.hgt")`
+
+Alternatively you can use `mapterrain(file.choose())` to select a file using Windows Explorer or Finder in OSX.
 
 A web map should be produced showing the terrain coverage for the file. 
 
