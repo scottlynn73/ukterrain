@@ -25,7 +25,7 @@ downloadUKterrain <- function(mainDir){
         # download UK data
         path <- "https://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/"
         # read in lists of data sets
-        file_coverage_UK <- read.csv(paste0(mainDir, "/", "file_list_UK.csv"))
+        #file_coverage_UK <- read.csv(paste0(mainDir, "/", "file_list_UK.csv"))
         # set the datafile column as the download list
         file_list_UK <- file_coverage_UK$datafile
         download_dir <- "Data_Downloads_UK"
