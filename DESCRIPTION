@@ -6,7 +6,7 @@ Version: 0.1.0
 Author: Dr Scott Hamilton [aut,cre]
 Maintainer: Dr Scott Hamiltin <scottlynn73@gmail.com>
 Description: The package has 4 functions which allow the user to download, show tile coverage, map in leaflet, and finally convert to OS grid co-ordinate system
-License: What license is it under?
+License:
 LazyData: TRUE
 RoxygenNote: 5.0.1
 Imports: raster, sp, leaflet, stringr, rgdal
