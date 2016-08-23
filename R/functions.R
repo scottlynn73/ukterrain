@@ -1,8 +1,26 @@
+# load libraries
+library(readr)
+
 # set paths to relevant resources
 path <- "https://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/"
-file_coverage_UK <- read.csv("file_list_UK.csv")
+file_coverage_UK <- read_csv("https://raw.githubusercontent.com/scottlynn73/ukterrain/master/file_list_UK.csv")
 
-# define download function
+#' Download data from the Shuttle Radar Topography Mission for the UK
+#'
+#' This function allows you to conveniently download UK terrain data from the
+#' SRTM3 dataset. This is the highest resolution SRTM dataset currenltly
+#' available and is particularly useful for running air qulity models.
+#'
+#' To run the downloader run the function with the desired download location
+#' as the only argument. This will place a copy of all UK SRTM3 files in that
+#' directory.
+#'
+#' @param Defaults to TRUE.
+#' @keywords terrain
+#' @export
+#' @examples
+#' downloadUKterrain("/Users/Scott/Downloads/")
+#'
 downloadUKterrain <- function(mainDir){
         # download UK data
         path <- "https://dds.cr.usgs.gov/srtm/version2_1/SRTM3/Eurasia/"
@@ -22,6 +40,18 @@ downloadUKterrain <- function(mainDir){
         }
 }
 
+#' Show the coverage of the SRTM3 datasets for the UK in a leaflet map.
+#'
+#' This convenience functions shows the locations of the SRTM3 data tiles in
+#' the UK. Each point in the map denotes the origin of the tile at the south
+#' west corner. The function has no arguments, so run with empty brackets.
+#'
+#' @param Defaults to TRUE.
+#' @keywords terrain
+#' @export
+#' @examples
+#' showUKterrain()
+#'
 # check coverage of UK terrain data, helps with tile selection
 showUKterrain <- function(){
         library(leaflet)
@@ -30,7 +60,16 @@ showUKterrain <- function(){
                 addMarkers(~lng, ~lat, popup = ~as.character(paste0("Lat=", lat," Lon =", lng)))
 }
 
-# map terrain tile
+#' Prepare a simple map with a terrain tile from the SRTM3 dataset using
+#' leaflet. To run the function simply pass the desired .hgt file to the
+#' function as an argument.
+#'
+#' @param Defaults to TRUE.
+#' @keywords terrain
+#' @export
+#' @examples
+#' mapterrain("/Users/Scott/Downloads/N55W005.hgt")
+#'
 mapterrain <- function(tile){
         library(raster)
         library(rgdal)
@@ -47,7 +86,17 @@ mapterrain <- function(tile){
                           title = title_string)
 }
 
-# convert terrain to UK coordinate system
+#' Convert SRTM3 dataset to the OS grid coordinate reference system EPSG 27700.
+#'
+#' To run the converter run the function with the desired file for projection
+#' to the OS grid coordinate system as the only argument.
+#'
+#' @param Defaults to TRUE.
+#' @keywords terrain
+#' @export
+#' @examples
+#' toUKterrain("/Users/Scott/Downloads/N55W005.hgt")
+#'
 toUKterrain <- function(filepath, tile){
         setwd(filepath)
         library(raster)
