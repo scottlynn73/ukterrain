@@ -3,11 +3,11 @@
 
 To install the tool use
 
-*library(devtools)*
+`library(devtools)`
 
 
-*install_github('scottlynn73/ukterrain')*
+`install_github('scottlynn73/ukterrain')`
 
 
-*library(ukterrain)*
+`library(ukterrain)`
 
