@@ -44,8 +44,8 @@ downloadUKterrain <- function(mainDir){
 # check coverage of UK terrain data, helps with tile selection
 showUKterrain <- function(){
         # show a map of UK coverage in SRTM data
-        leaflet::leaflet(data = file_coverage_UK) %>% addTiles() %>%
-                addMarkers(~lng, ~lat,
+        leaflet::leaflet(data = file_coverage_UK) %>% leaflet::addTiles() %>%
+                leaflet::addMarkers(~lng, ~lat,
                            popup = ~as.character(paste0("Lat=", lat," Lon =", lng)))
 }
 
