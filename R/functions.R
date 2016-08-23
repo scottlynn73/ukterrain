@@ -61,12 +61,13 @@ showUKterrain <- function(){
 #'
 mapterrain <- function(tile){
         elevation <- raster::raster(tile)
-        pal <- leaflet::colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"), values(elevation), na.color = "transparent")
+        pal <- leaflet::colorNumeric(c("#0C2C84", "#41B6C4", "#FFFFCC"),
+                            raster::values(elevation), na.color = "transparent")
         tile_name <- stringr::str_sub(tile, start= -11)
         title_string <- paste0(tile_name, " SRTM Elev. (m)")
-        leaflet::leaflet() %>% addTiles() %>%
-                addRasterImage(elevation, colors = pal, opacity = 0.8) %>%
-                addLegend(pal = pal, values = values(elevation),
+        leaflet::leaflet() %>% leaflet::addTiles() %>%
+                leaflet::addRasterImage(elevation, colors = pal, opacity = 0.8) %>%
+                leaflet::addLegend(pal = pal, values = raster::values(elevation),
                           title = title_string)
 }
 
