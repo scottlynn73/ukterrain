@@ -18,7 +18,7 @@ To download data simple pass the downloadUKterrain() function with your desired 
 
 `downloadUKterrain("/Users/Scott/Downloads/")`
 
-This will create a directory of files called Data_Downloads_UK in the directory containing the terrain files.
+This will create a directory of files called Data_Downloads_UK in the directory containing the terrain files. This should only need to be run once.
 
 ### Viewing the extent of data and picking the correct tile for your site
 The package includes the showUKterrain function which produces a webmap showing the locations of the tiles included in the dataset. This is useful in selecting a tile for use later, the user can click the map points to get the reference for the tile so that they may select this tile for mapping or conversion.
