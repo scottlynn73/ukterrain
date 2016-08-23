@@ -11,6 +11,8 @@ To install the tool use
 
 `library(ukterrain)`
 
+`library(magrittr)`
+
 The user may wish to download a UK subset of Shuttle Radar Topography data but is unsure which tiles from the extensive list are included in the UK coverage. This package provides a useful means of downloading,checking coverage, mapping, and converting to OS grid co-ordinate reference system from the native format.
 
 ###Downloading data
