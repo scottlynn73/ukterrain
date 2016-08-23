@@ -16,7 +16,7 @@ The user may wish to download a UK subset of Shuttle Radar Topography data but i
 ###Downloading data
 To download data simple pass the downloadUKterrain() function with your desired directory location as the only argument, like so:
 
-`downloadUKterrain("Users/Scott/Downloads/")`
+`downloadUKterrain("/Users/Scott/Downloads/")`
 
 This will create a directory of files called Data_Downloads_UK in the directory containing the terrain files.
 
