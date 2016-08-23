@@ -1,17 +1,12 @@
 Package: ukterrain
+Date: 2016-08-23
 Type: Package
 Title: A package for easy handling of UK data from the SRTM3 terrain archive
 Version: 0.1.0
-Author: Dr Scott Hamilton
-Maintainer: scottlynn73@gmail.com
-Description: The package has 4 functions which allow the user to download, show
-tile coverage, map in leaflet, and finally convert to OS grid co-ordinate system
+Author: Dr Scott Hamilton [aut,cre]
+Maintainer: Dr Scott Hamiltin <scottlynn73@gmail.com>
+Description: The package has 4 functions which allow the user to download, show tile coverage, map in leaflet, and finally convert to OS grid co-ordinate system
 License: What license is it under?
 LazyData: TRUE
 RoxygenNote: 5.0.1
-Imports:
-        raster,
-        sp,
-        leaflet,
-        stringr,
-        rgdal
+Imports: raster, sp, leaflet, stringr, rgdal
