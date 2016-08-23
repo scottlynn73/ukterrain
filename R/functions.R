@@ -67,7 +67,7 @@ mapterrain <- function(tile){
         title_string <- paste0(tile_name, " SRTM Elev. (m)")
         leaflet::leaflet() %>% addTiles() %>%
                 leaflet::addRasterImage(elevation, colors = pal, opacity = 0.8) %>%
-                leaflet::addLegend(pal = pal, values = leaflet::values(elevation),
+                leaflet::addLegend(pal = pal, values = values(elevation),
                           title = title_string)
 }
 
