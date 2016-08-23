@@ -9,4 +9,4 @@ Description: The package has 4 functions which allow the user to download, show 
 License:
 LazyData: TRUE
 RoxygenNote: 5.0.1
-Imports: raster, sp, leaflet, stringr, rgdal, magrittr, dplyr
+Imports: raster, sp, leaflet, stringr, rgdal, magrittr, dplyr, RColorBrewer
