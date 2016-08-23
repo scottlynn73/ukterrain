@@ -23,7 +23,8 @@ downloadUKterrain <- function(mainDir){
 
         for(file in file_list_UK){
                 filepath <- paste0(path, file)
-                download.file(filepath, destfile = file, method = 'curl')
+                #download.file(filepath, destfile = file, method = 'curl') CURL DOESNT SEEM TO WORK
+                download.file(filepath, destfile = file)
                 unzip(paste0(mainDir, "/", download_dir, "/", file))
                 file.remove(paste0(mainDir, "/",download_dir, "/", file))
         }
