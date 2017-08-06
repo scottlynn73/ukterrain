@@ -15,7 +15,7 @@ To install the tool use
 
 The user may wish to download a UK subset of Shuttle Radar Topography data but is unsure which tiles from the extensive list are included in the UK coverage. This package provides a useful means of downloading,checking coverage, mapping, and converting to OS grid co-ordinate reference system from the native format.
 
-###Downloading data
+### Downloading data
 To download data simple pass the downloadUKterrain() function with your desired directory location as the only argument, like so:
 
 `downloadUKterrain("/Users/Scott/Downloads/")`
